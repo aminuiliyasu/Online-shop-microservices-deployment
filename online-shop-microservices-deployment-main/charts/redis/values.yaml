@@ -1,0 +1,13 @@
+appName: redis
+appImage: redis
+appVersion: 5.0.4
+replicaCount: 1
+containerPort: 6379
+volumeName: redis-data
+containerMountPath: /data
+
+servicePort: 6379
+
+autoscaling:
+  enabled: false
+  # other autoscaling configurations...
