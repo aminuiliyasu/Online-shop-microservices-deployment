@@ -2,16 +2,19 @@ pipeline {
   agent any
   stages {
     stage('checkout Code') {
-      steps {
-        git(url: 'https://github.com/aminuiliyasu/Online-shop-microservices-deployment.git', branch: 'main')
-      }
-    }
+      parallel {
+        stage('checkout Code') {
+          steps {
+            git(url: 'https://github.com/aminuiliyasu/Online-shop-microservices-deployment.git', branch: 'main')
+          }
+        }
 
-    stage('error') {
-      steps {
-        sh 'ls -la'
-        sh '''ls -la
-'''
+        stage('') {
+          steps {
+            sh 'ls -la'
+          }
+        }
+
       }
     }
 
