@@ -7,9 +7,11 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
         sh 'ls -la'
+        sh '''ls -la
+'''
       }
     }
 
